@@ -1,11 +1,11 @@
-# OpenClaw: Open-Source Autonomous Personal AI Assistant
+# FasterClaw or FasterOpenClaw: Open-Source Autonomous Personal AI Assistant
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub stars](https://img.shields.io/github/stars/openclaw/openclaw?style=social)](https://github.com/openclaw/openclaw/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/openclaw/openclaw?style=social)](https://github.com/openclaw/openclaw/network/members)
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
-🦞 **OpenClaw** — The AI that actually *does things* for you.  
+🦞 **FasterClaw** — The AI that actually *does things* for you.  
 Your private, self-hosted, autonomous personal AI assistant that lives in your messaging apps (WhatsApp, Telegram, Discord, Slack, iMessage, Signal & more), remembers everything, acts proactively, and executes real tasks on your behalf.
 
 From clearing your inbox and scheduling meetings to checking you in for flights, summarizing documents, running terminal commands, controlling smart devices, pushing code, or even building new skills autonomously — OpenClaw turns natural language into real-world action.
