@@ -1,0 +1,40 @@
+services:
+  # ─────────────────────────────────────────────
+  # FasterClaw Agent (one-shot query)
+  #   docker compose run --rm fasterclaw-agent -m "Hello"
+  # ─────────────────────────────────────────────
+  fasterclaw-agent:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: fasterclaw-agent
+    profiles:
+      - agent
+    volumes:
+      - ./config/config.json:/root/.fasterclaw/config.json:ro
+      - fasterclaw-workspace:/root/.fasterclaw/workspace
+    entrypoint: ["fasterclaw", "agent"]
+    stdin_open: true
+    tty: true
+
+  # ─────────────────────────────────────────────
+  # FasterClaw Gateway (Long-running Bot)
+  #   docker compose up fasterclaw-gateway
+  # ─────────────────────────────────────────────
+  fasterclaw-gateway:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: fasterclaw-gateway
+    restart: unless-stopped
+    profiles:
+      - gateway
+    volumes:
+      # Configuration file
+      - ./config/config.json:/root/.fasterclaw/config.json:ro
+      # Persistent workspace (sessions, memory, logs)
+      - fasterclaw-workspace:/root/.fasterclaw/workspace
+    command: ["gateway"]
+
+volumes:
+  fasterclaw-workspace:
